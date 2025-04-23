@@ -1,0 +1,56 @@
+/* ───────────────────────────
+   PALETA ESTÁTICA (HEX)
+─────────────────────────── */
+$primary-static:        #784dff;
+$secondary-static:      #ffffff;
+
+$bg-dark-static:        #050509;
+$bg-light-static:       #ffffff;
+
+$text-dark-static:      #f0f0f0;
+$text-light-static:     #1a1a22;
+
+$gray-100-static:       #c3c3ce;
+
+/* ───────────────────────────
+   CUSTOM PROPERTIES (runtime)
+─────────────────────────── */
+:root {
+  /* tema oscuro (default) */
+  --color-primary:        #{$primary-static};
+  --color-secondary:      #{$secondary-static};
+
+  --color-bg:             #{$bg-dark-static};
+  --color-bg-secondary:   #0e0e12;
+
+  --color-text-primary:   #{$text-dark-static};
+  --color-text-secondary: #{$gray-100-static};
+}
+
+body.theme-light {
+  --color-bg:             #{$bg-light-static};
+  --color-bg-secondary:   #f4f4f8;
+
+  --color-text-primary:   #{$text-light-static};
+  --color-text-secondary: #4a4a5a;
+  --color-secondary:      #5d3bff;          /* <<< NUEVO: morado legible en light */
+}
+
+/* ───────────────────────────
+   ALIAS “RUNTIME” (usa estos
+   en propiedades simples)
+─────────────────────────── */
+$primary:        var(--color-primary);
+$secondary:      var(--color-secondary);
+
+$bg:             var(--color-bg);
+$bg-secondary:   var(--color-bg-secondary);
+
+$text-primary:   var(--color-text-primary);
+$text-secondary: var(--color-text-secondary);
+
+/* Compat antiguos */
+$bg-dark:   $bg;
+$bg-light:  $bg;
+$text-dark: $text-primary;
+$text-light:$text-primary;

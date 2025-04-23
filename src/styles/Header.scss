@@ -1,0 +1,74 @@
+@use './variables' as *;
+
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: 1rem 2rem;
+  background: transparent;
+
+  .header-content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $primary;
+  font-family: 'Poppins', sans-serif;
+}
+.nav {
+  display: flex;
+  gap: 2rem; 
+  align-items: center; 
+}
+
+.nav-link {
+  color: $secondary;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color .3s ease;
+
+  &:hover {
+    color: $primary;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: $primary;
+    transition: width .3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid $primary;
+  background: rgba(255,255,255,0.06);
+  color: $primary;
+  cursor: pointer;
+  transition: transform .3s ease;
+
+  &:hover {
+    transform: rotate(20deg) scale(1.05);
+  }
+}

@@ -1,0 +1,69 @@
+@use './variables' as *;
+
+.integrations {
+  padding: 4rem 2rem;
+
+  h2 {
+    margin: 0 0 2rem;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $primary;
+
+    span {
+      color: $secondary;
+    }
+  }
+
+  .integration-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  .integration-card {
+    border-radius: 10px;
+    padding: 1.5rem;
+
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba($primary, 0.3);
+    color: $text-dark;
+
+    body.theme-light & {
+      background: #fff;
+      color: #000;
+      border-color: rgba(0, 0, 0, 0.1);
+    }
+
+    body.theme-dark & {
+      background: rgba(255, 255, 255, 0.03);
+      color: $text-dark;
+      border-color: rgba($primary, 0.3);
+    }
+
+    h3 {
+      margin: 0 0 1rem;
+      font-size: 1.15rem;
+      color: $secondary;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li + li {
+        margin-top: .75rem;
+      }
+
+      a {
+        color: $primary;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

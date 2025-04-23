@@ -1,0 +1,76 @@
+@use './variables' as *;
+
+.services {
+  padding: 4rem 2rem;
+
+  h2 {
+    margin: 0;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $primary;
+
+    span {
+      color: $secondary;
+    }
+  }
+
+  .services-swiper {
+    margin-top: 2rem;
+
+    .service-card {
+      height: 100%;
+      padding: 2rem 1.5rem;
+      border-radius: 10px;
+      backdrop-filter: blur(2px);
+      transition: transform 0.3s ease, border-color 0.3s ease;
+
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba($primary, 0.3);
+      color: $text-dark;
+
+      :global(.light) & {
+        background: #fff;
+        color: #000;
+        border-color: rgba(0, 0, 0, 0.1);
+      }
+
+      :global(.dark) & {
+        background: rgba(255, 255, 255, 0.03);
+        color: $text-dark;
+        border-color: rgba($primary, 0.3);
+      }
+
+      &:hover {
+        transform: translateY(-6px);
+        border-color: $primary;
+      }
+
+      .icon {
+        font-size: 2rem;
+        color: $primary;
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        margin: 0 0 0.75rem;
+        font-size: 1.15rem;
+        color: $secondary;
+      }
+
+      p {
+        margin: 0;
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+    }
+
+    .swiper-pagination-bullet {
+      background: rgba($primary, 0.4);
+
+      &-active {
+        background: $primary;
+      }
+    }
+  }
+}

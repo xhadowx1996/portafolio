@@ -1,0 +1,29 @@
+@use './variables' as *;
+
+.social-bar {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  z-index: 900;
+
+  a {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba($primary, 0.12);
+    color: $primary;
+    font-size: 1.3rem;
+    transition: transform .3s, background .3s;
+
+    &:hover {
+      transform: translateY(-4px) scale(1.05);
+      background: $primary;
+      color: #fff;
+    }
+  }
+}

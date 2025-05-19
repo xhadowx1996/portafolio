@@ -5,14 +5,32 @@ const integrations = [
   {
     category: 'Tiendas VTEX',
     items: [
-      { name: 'Colchones Spring', url: 'https://www.colchonesspring.com.co' }
+      { 
+        name: 'Colchones Spring', url: 'https://www.colchonesspring.com.co'
+      },
+      {
+        name: 'Studio f', url: 'https://www.studiof.com.co'
+      },
+      {
+        name: 'Studio f Usa ', url: 'https://us.studiof.com'
+      },
+
+      {
+        name: 'Dior Argentina', url: 'https://shop.dior.com.ar'
+      },
+      {
+        name: 'Coca Cola Argentina', url: 'https://tienda.coca-cola.com.ar'
+      },
+      {
+        name: 'fuera de serie', url: 'https://www.fueradeserie.com.co'
+      },
     ]
   },
   {
     category: 'Apps VTEX',
     items: [
-      { name: 'Consulta de Inventarios', url: '#' },
-      { name: 'Servicios a la medida en VTEX IO', url: '#' }
+      { name: 'Consulta de Inventarios', url: '#projects' },
+      { name: 'Servicios a la medida en VTEX IO', url: '#projects' }
     ]
   }
 ]

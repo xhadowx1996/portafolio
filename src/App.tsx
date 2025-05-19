@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import Services from './components/Services'
 import About from './components/About'
+import ProjectsSlider from './components/ProjectsSlider'
 import Experience from './components/Experience'
 import Integrations from './components/Integrations'
 import SocialBar from './components/SocialBar'
@@ -24,6 +25,7 @@ function App() {
       <Services />
       <About />
       <Experience />
+      <ProjectsSlider />  
       <Integrations />
       <SocialBar />
       <Footer />
